@@ -37,6 +37,22 @@ cp -r book-distillation ~/.openclaw/workspace-YOUR_AGENT/skills/
 
 ---
 
+### protein-sss
+
+蛋白质超二级结构（Supersecondary Structure）分析方法。
+
+**核心方法**：
+- ABEGO 构象分类
+- Walker-A Motif 检测
+- CAFS 非冗余数据集构建
+- 突变效应预测
+- 卷曲螺旋设计
+- AlphaFold 局限与补充策略
+
+**来源**：《Protein Supersecondary Structures: Methods and Protocols》第3版
+
+---
+
 ## License
 
 MIT
