@@ -24,16 +24,7 @@ Agent skills distilled from books and best practices.
 | 参考导向 | 1-2 | 查找表+常见问题 |
 | 案例导向 | 2-3 | 模式+反模式+决策 |
 
----
-
-## Usage
-
-Skills are designed for [OpenClaw](https://github.com/openclaw/openclaw) agents.
-
-Copy skill folder to your workspace:
-```bash
-cp -r book-distillation ~/.openclaw/workspace-YOUR_AGENT/skills/
-```
+**参考来源**：灵感来自 [kangarooking/cangjie-skill](https://github.com/kangarooking/cangjie-skill)
 
 ---
 
@@ -50,6 +41,17 @@ cp -r book-distillation ~/.openclaw/workspace-YOUR_AGENT/skills/
 - AlphaFold 局限与补充策略
 
 **来源**：《Protein Supersecondary Structures: Methods and Protocols》第3版
+
+---
+
+## Usage
+
+Skills are designed for [OpenClaw](https://github.com/openclaw/openclaw) agents.
+
+Copy skill folder to your workspace:
+```bash
+cp -r book-distillation ~/.openclaw/workspace-YOUR_AGENT/skills/
+```
 
 ---
 
