@@ -44,6 +44,71 @@ Agent skills distilled from books and best practices.
 
 ---
 
+### stock-technical-analysis
+
+A股股票技术分析 + 基本面多源验证，短线交易建议。
+
+**核心能力**：
+- 腾讯API获取K线数据（东方财富被屏蔽）
+- 8指标技术分析：均线/MACD/KDJ/RSI/布林带/WR/DMI/成交量
+- 基本面多源交叉验证（至少3次搜索）
+- 中文字体图表（FontProperties直接加载）
+- T+0品种批量分析（可转债+跨境ETF）
+
+**文件**：
+| 文件 | 说明 |
+|------|------|
+| `tech_analysis_v3.py` | 单股技术分析脚本 |
+| `t0_analysis.py` | T+0品种批量分析 |
+| `002124_ta.png` | 天邦食品分析示例 |
+| `t0_analysis.png` | T+0品种分析示例 |
+
+---
+
+### lottery-prediction
+
+双色球历史数据分析 + Transformer预测模型。
+
+**核心能力**：
+- 历史数据抓取（2003-2025年，3296期）
+- 特征工程：奇偶比、大小比、和值、跨度、AC值、遗漏值
+- Transformer Encoder模型（2层，d_model=64，4头注意力）
+- 训练/测试集按时间顺序分割
+
+**重要声明**：彩票本质是随机事件，模型仅用于学习和娱乐。
+
+**文件**：
+| 文件 | 说明 |
+|------|------|
+| `train_final.py` | Transformer模型训练脚本 |
+| `fetch_data.py` | 历史数据抓取脚本 |
+| `README.md` | 项目详细报告 |
+
+---
+
+### comfyui-ltx-video
+
+ComfyUI LTX 2.3 (Sulphur) 图生视频/文生视频工作流。
+
+**核心能力**：
+- Sulphur主模型(30GB) + Gemma3文本编码器(fp8, 9GB)
+- 双LoRA链：sulphur_final(1.0) + distilled(0.5/0.7)
+- T2V/I2V工作流
+- 采样器：euler_ancestral_cfg_pp + ltxv_beta_dist
+
+**关键配置**：
+- LTX 2.3使用Gemma3 fp8(hidden=4096)，不是LTX 2.1的fp4_mixed(hidden=3840)
+- ComfyUI必须v0.21.1+（旧版不支持hidden_size=4096）
+- 下载模型需VPN代理(http://127.0.0.1:7892)
+
+**文件**：
+| 文件 | 说明 |
+|------|------|
+| `sulphur_test.json` | T2V工作流 |
+| `sulphur_i2v_baby.json` | I2V工作流 |
+
+---
+
 ## Usage
 
 Skills are designed for [OpenClaw](https://github.com/openclaw/openclaw) agents.
