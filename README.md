@@ -111,12 +111,34 @@ ComfyUI LTX 2.3 (Sulphur) 图生视频/文生视频工作流。
 
 ## Usage
 
-Skills are designed for [OpenClaw](https://github.com/openclaw/openclaw) agents.
+Skills 适用于各种 AI Agent 框架，包括 [OpenClaw](https://github.com/openclaw/openclaw)、[Hermes Agent](https://github.com/nousresearch/hermes-agent)、[Claude Code](https://docs.anthropic.com/en/docs/claude-code) 等。
 
-Copy skill folder to your workspace:
+每个 skill 文件夹包含：
+- `SKILL.md` — 核心知识和流程（Agent 可直接读取）
+- `scripts/` — 参考实现代码
+- `references/` — 补充资料
+
+### 直接使用
+
+将 skill 文件夹复制到你的项目或 Agent 工作区：
+
 ```bash
-cp -r book-distillation ~/.openclaw/workspace-YOUR_AGENT/skills/
+# OpenClaw
+cp -r stock-technical-analysis ~/.openclaw/workspace-YOUR_AGENT/skills/
+
+# Hermes Agent
+cp -r stock-technical-analysis ~/.hermes/skills/
+
+# 任意项目
+cp -r stock-technical-analysis ./your-project/skills/
 ```
+
+### 作为知识库
+
+Skill 也可直接阅读，无需 Agent 框架：
+- `SKILL.md` 包含完整的方法论和步骤
+- `scripts/` 包含可运行的代码
+- 适合学习和参考
 
 ---
 
